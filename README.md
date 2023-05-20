@@ -202,3 +202,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nv
 # ln nvim config from this repo to .config/nvim
 ln -s $(pwd)/nvim ~/.config/nvim
 ```
+## Install Hyprland
+
+```sh
+yay -S sddm-git hyprland-git waybar-hyprland-git kitty hyprpaper dunst wireplumber polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland
+```
+
+Next edit the SDDM config
