@@ -1,0 +1,50 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 40, // Waybar height (to be removed for auto height)
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": [
+	    "wlr/workspaces"
+    ],
+    "modules-center": [
+	    "hyprland/window"
+    ],
+    "modules-right": [
+	     "wireplumber",
+	     "cpu",
+	     "memory",
+	     "clock",
+	     "tray"
+    ],
+    "hyprland/window": {
+	"format": "{}",
+	"separate-outputs": true
+    },
+    "wlr/workspaces": {
+        "format": "{icon}",
+	"on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Brussels",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{: %R   %d/%m}"
+    },
+    "cpu": {
+        "format": "CPU {usage}%",
+	"interval": 10
+    },
+    "memory": {
+        "format": "RAM {}%",
+	"interval": 30
+    },
+    "wireplumber": {
+	"format": "  {volume}%",
+        "format-muted": "  {volume}%"
+    }
+}
+
