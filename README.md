@@ -100,7 +100,7 @@ mkfs.btrfs /dev/<lvm-partition>
 
 Then check with `lsblk`
 
-### chroot the partitions
+### Install Arch on the disk
 
 ```sh
 mount /dev/<lvm-partition> /mnt
@@ -110,6 +110,87 @@ Install Arch on the disk
 
 ```sh
 pacstrap /mnt base linux linux-firmware amd-ucode lvm2 vim
+```
+
+Next generate `/etc/fstab` with `genfstab`
+
+```sh
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+### Create SWAP file
+
+```sh
+arch-chroot /mnt
+
+fallocate -l <size>GB /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+
+swapon /swapfile
+```
+Then add swap file to `/etc/fstab`, by adding this line.
+
+`/swapfile none swap default 0 0'
+
+### Setup localisation and hosts
+
+> Only do this while still chroot in your Arch install
+
+ ```sh
+# Get the name of your location
+ timedatectl list-timezones | grep Brussels
+ ln -sf /usr/share/zoneinfo/Europe/Brussels /etc/localtime
+ hwclock --systohc
+
+# uncomment the locals you want
+vim /etc/locale.gen
+
+# then generate them
+locale-gen
+
+echo LANG=en_US.UTF-8 >> /etc/locale.conf
+echo KEYMAP=be-latin1 >> /etc/vconsole.conf
+echo archlinux >> /etc/hostname
+ ```
+
+ Fill up the `/etc/hosts` file
+
+ ```ini
+127.0.0.1   localhost
+::1         localhost
+127.0.1.1   archlinux
+ ```
+
+### Users
+
+Set root password with `passwd`
+
+```
+useradd -mG wheel rre
+passwd
+```
+
+Don't forget to uncomment %wheel from the sudoers file
+
+### Initramfs
+
+If LVM has been created add lvm2 to the HOOKS inside the mkinitcpio config file, located at `/etc/mkinitcpio.conf`
+
+`HOOKS=(... lvm2 filesystem ...)`
+
+To recreate the initramfs simply run this command.
+
+`mkinitcpio -P`
+
+## Install yay
+
+Clone the repo and install yay
+
+```sh
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 
