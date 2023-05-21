@@ -205,8 +205,11 @@ ln -s $(pwd)/nvim ~/.config/nvim
 ## Install Hyprland and his depedencies
 
 ```sh
-yay -S sddm-git hyprland-git waybar-hyprland-git kitty hyprpaper hyprshot dunst wireplumber swaylock wlogout udiskie cliphist polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland
+yay -S sddm-git hyprland-git waybar-hyprland-git kitty hyprpaper hyprshot \
+    dunst wireplumber swaylock wlogout udiskie cliphist polkit-kde-agent \
+    qt5-wayland qt6-wayland xdg-desktop-portal-hyprland
 ```
+> Note: Replace hyprland-git with hyprland-nvidia-git when using an Nvidia card
 
 Next edit the SDDM config
 
