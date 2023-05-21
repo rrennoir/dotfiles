@@ -17,12 +17,12 @@
 	     "tray"
     ],
     "hyprland/window": {
-	"format": "{}",
-	"separate-outputs": true
+	    "format": "{}",
+	    "separate-outputs": true
     },
     "wlr/workspaces": {
         "format": "{icon}",
-	"on-click": "activate",
+	    "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
@@ -32,18 +32,18 @@
     "clock": {
         "timezone": "Europe/Brussels",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{: %R   %d/%m}"
+    	"format": "{: %R   %d/%m}"
     },
     "cpu": {
         "format": "CPU {usage}%",
-	"interval": 10
+	    "interval": 10
     },
     "memory": {
         "format": "RAM {}%",
-	"interval": 30
+    	"interval": 30
     },
     "wireplumber": {
-	"format": "  {volume}%",
+	    "format": "  {volume}%",
         "format-muted": "  {volume}%"
     }
 }
