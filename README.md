@@ -196,16 +196,18 @@ makepkg -si
 ## Install neovim
 
 ```sh
-yay -S neovim
+yay -S neovim lua-language-server
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # ln nvim config from this repo to .config/nvim
 ln -s $(pwd)/nvim ~/.config/nvim
 ```
-## Install Hyprland
+## Install Hyprland and his depedencies
 
 ```sh
-yay -S sddm-git hyprland-git waybar-hyprland-git kitty hyprpaper hyprshot dunst wireplumber swaylock wlogout polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland
+yay -S sddm-git hyprland-git waybar-hyprland-git kitty hyprpaper hyprshot dunst wireplumber swaylock wlogout udiskie cliphist polkit-kde-agent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland
 ```
 
 Next edit the SDDM config
+
+## ZSH and oh-my-posh
