@@ -11,8 +11,10 @@
     ],
     "modules-right": [
 	     "wireplumber",
+         // "mpris",
 	     "cpu",
 	     "memory",
+         "network",
 	     "clock",
 	     "tray"
     ],
@@ -36,15 +38,34 @@
     },
     "cpu": {
         "format": "CPU {usage}%",
-	    "interval": 10
+	    "interval": 5
     },
     "memory": {
         "format": "RAM {}%",
-    	"interval": 30
+    	"interval": 10
     },
     "wireplumber": {
 	    "format": "  {volume}%",
         "format-muted": "  {volume}%"
+    },
+    "mpris": {
+        "format": "{status_icon} {player}",
+	    "format-paused": "{status_icon} {player}",
+	    "status-icons": {
+            "playing": "▶",
+		    "paused": "⏸",
+            "stopped": "󰙧",
+	    },
+        "interval": 1
+    },
+    "network": {
+        "interval": 5,
+        "format-ethernet": "󰈁 {ifname}",
+        "format-wifi": "󰖩 {signalStrength}%",
+        "format-disconnected": "󰈂",
+        "tooltip-format-ethernet": "󰈁 {ipaddr}/{cidr} via {gwaddr}",
+        "tooltip-format-wifi": "󰖩 {ipaddr}/{cidr} on {essid}",
+        "tooltip-format-disconnected": "Disconnected",
     }
 }
 

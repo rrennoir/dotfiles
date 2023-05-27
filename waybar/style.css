@@ -50,10 +50,12 @@ tooltip {
 
 #custom-weather,
 #window,
+#mpris,
 #clock,
 #wireplumber,
 #tray,
 #cpu,
+#network,
 #memory {
     color: #cad3f5;
     background: #24273a;
