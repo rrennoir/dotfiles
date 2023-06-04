@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (0px)
     "modules-left": [
 	    "wlr/workspaces"
     ],
