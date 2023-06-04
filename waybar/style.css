@@ -19,10 +19,18 @@ tooltip {
     border-color: #11111b;
 }
 
+.modules-right {
+    margin-right: 1rem;
+}
+
 #workspaces button {
     padding: 0 0.5em;
     color: #a5adcb;
-    margin-right: 5px;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    border-style: solid;
+    border-color: #939ab7;
+    border-width: 0.05rem;
+    border-radius: 10px;
 }
 
 #workspaces button.active {
@@ -60,19 +68,18 @@ tooltip {
     color: #cad3f5;
     background: #24273a;
     padding: 3px 10px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 #tray {
     border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 4px;
+    margin-left: 0.5rem;
 }
 
 #workspaces {
     background: #24273a;
     border-radius: 0px 10px 10px 0px;
-    margin-top: 10px;
+    margin-top: 5px;
     padding-left: 10px;
 }
 
