@@ -1,0 +1,2 @@
+timeout 600 "hyprclt dispatch dpms off"
+resume "hyprctl dispatch dpms on"
