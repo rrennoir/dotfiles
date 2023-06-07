@@ -1,10 +1,10 @@
 require("catppuccin").setup({
 	transparent_background = true,
-    color_overrides = {
-        macchiato = {
-            surface1 = "#F5A97F"
+    custom_highlights = function (colors)
+        return {
+            LineNr = { fg = colors.teal },
         }
-    },
+    end
 })
- 
+
 vim.cmd.colorscheme "catppuccin-macchiato"
