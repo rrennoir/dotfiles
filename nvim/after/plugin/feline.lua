@@ -163,7 +163,6 @@ table.insert(components.active[LEFT], {
     }
   end,
 })
-    struct MyData* next;
 
 -- insert the filename component after the mode component
 table.insert(components.active[LEFT], {
