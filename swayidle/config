@@ -1,2 +1,1 @@
-timeout 600 "hyprclt dispatch dpms off"
-resume "hyprctl dispatch dpms on"
+timeout 600 "hyprctl dispatch dpms off" resume "hyprctl dispatch dpms on"
