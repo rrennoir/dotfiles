@@ -13,6 +13,7 @@
 	     "wireplumber",
          // "mpris",
 	     "cpu",
+         "temperature",
 	     "memory",
          "network",
 	     "clock",
@@ -39,11 +40,17 @@
     },
     "cpu": {
         "format": "CPU {usage}%",
-	    "interval": 5
+	    "interval": 5,
+        "critical-threshold": 80,
+    },
+    "temperature": {
+        "format": "{temperatureC}°C ",
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "interval": 2,
     },
     "memory": {
         "format": "RAM {}%",
-    	"interval": 10
+    	"interval": 5
     },
     "wireplumber": {
 	    "format": "  {volume}%",
