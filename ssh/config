@@ -1,4 +1,9 @@
 Host github.com
     HostName github.com
     User rrennoir
-    IdentityFile ~/.ssh/github
+    IdentityFile ~/.ssh/git-personal
+
+Host gitlab.com
+    HostName gitlab.com
+    User rrennoir
+    IdentityFile ~/.ssh/git-personal
