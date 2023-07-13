@@ -67,7 +67,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -la'
 alias vim='nvim'
-alias ssh='kitty +kitten ssh'
+alias kssh='kitty +kitten ssh'
 alias icat='kitty +kitten icat'
 
 # Prompt
