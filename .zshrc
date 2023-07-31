@@ -70,6 +70,9 @@ alias vim='nvim'
 alias kssh='kitty +kitten ssh'
 alias icat='kitty +kitten icat'
 
+# Stupid poetry trying to use KDE wallet instead of the gnome one installed
+export PYTHON_KEYRING_BACKEND=keyring.backends.SecretService.Keyring 
+
 # Prompt
 PROMPT="[%n@%m %~]$ "
 
