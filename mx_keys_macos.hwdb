@@ -1,0 +1,3 @@
+evdev:name:Logitech USB Receiver:*
+    KEYBOARD_KEY_70035=key_102nd
+    KEYBOARD_KEY_70064=key_grave
