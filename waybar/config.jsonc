@@ -11,7 +11,6 @@
     ],
     "modules-right": [
 	     "wireplumber",
-         // "mpris",
 	     "cpu",
          "temperature",
 	     "memory",
@@ -23,15 +22,13 @@
 	    "format": "{}",
 	    "separate-outputs": true
     },
-    "wlr/workspaces": {
-        "format": "{icon}",
-	    "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "sort-by-number": true,
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "active-only": false,
+        "sort-by": "number",
     },
     "tray": {
-        "spacing": 10
+        "spacing": 5
     },
     "clock": {
         "interval": 5,
@@ -51,32 +48,22 @@
         }
     },
     "cpu": {
-        "format": "CPU {usage}%",
+        "format": "{usage}% / {avg_frequency} GHz",
 	    "interval": 5,
         "critical-threshold": 80,
     },
     "temperature": {
-        "format": "{temperatureC}°C ",
+        "format": "{temperatureC}°C",
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
         "interval": 2,
     },
     "memory": {
-        "format": "RAM {}%",
+        "format": "{used} GiB",
     	"interval": 5
     },
     "wireplumber": {
 	    "format": "  {volume}%",
         "format-muted": "  {volume}%"
-    },
-    "mpris": {
-        "format": "{status_icon} {player}",
-	    "format-paused": "{status_icon} {player}",
-	    "status-icons": {
-            "playing": "▶",
-		    "paused": "⏸",
-            "stopped": "󰙧",
-	    },
-        "interval": 1
     },
     "network": {
         "interval": 5,
