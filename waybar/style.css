@@ -1,3 +1,5 @@
+@import "macchiato.css";
+
 * {
     border: none;
     border-radius: 0;
@@ -5,58 +7,58 @@
     font-weight: bold;
     font-size: 14px;
     min-height: 0;
+    margin: 0.1rem 0;
 }
 
 window#waybar {
-    background: transparent;
+    background: @crust;
 }
 
 tooltip {
-    background: #6e738d;
-    border-radius: 10px;
+    background: @overlay0;
+    border-radius: 1rem;
     border-width: 2px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: @base;
 }
 
 .modules-right {
-    margin-right: 1rem;
+    color: @text;
+    background: @surface0;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.modules-center {
+    color: @text;
+    background: @surface0;
+    border-radius: 1rem;
+}
+
+.modules-left {
+    color: @text;
+    background: @surface0;
+    border-radius: 0 1rem 1rem 0;
 }
 
 #workspaces button {
-    padding: 0 0.5em;
-    color: #a5adcb;
-    margin: 0.25rem 0.5rem 0.25rem 0;
-    border-style: solid;
-    border-color: #939ab7;
-    border-width: 0.05rem;
-    border-radius: 10px;
+    color: @crust;
+    margin: 0.1rem 0.5rem 0.1rem 0;
+    background: @rosewater;
+    border-radius: 1rem;
 }
 
 #workspaces button.active {
-    color: #1e2030;
-    border-radius: 10px;
-    background: #b7bdf8;
-}
-
-#workspaces button.focused {
-    color: #a6adc8;
-    background: #a6da95;
+    background: @sapphire;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #ed8796;
-    border-radius: 10px;
+    background: @red;
 }
 
 #workspaces button:hover {
-    background: #c6a0f6;
-    color: #000000;
-    border-radius: 10px;
+    background: @mauve;
 }
 
-#custom-weather,
 #window,
 #mpris,
 #clock,
@@ -66,40 +68,15 @@ tooltip {
 #cpu,
 #network,
 #memory {
-    color: #cad3f5;
-    background: #24273a;
+    color: @text;
     padding: 3px 10px;
-    margin-top: 5px;
-}
-
-#tray {
-    border-radius: 10px;
-    margin-left: 0.5rem;
 }
 
 #workspaces {
-    background: #24273a;
-    border-radius: 0px 10px 10px 0px;
-    margin-top: 5px;
-    padding-left: 10px;
+    padding-left: 1rem;
+    padding-right: 0.3rem;
 }
 
 #window {
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
-}
-
-#clock {
-    border-radius: 0px 10px 10px 0px;
-}
-
-#wireplumber {
-    border-radius: 10px 0px 0px 10px;
-}
-
-#cpu {
-}
-
-#memory {
+    margin: 0 1rem;
 }
