@@ -60,9 +60,9 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # Alias
-alias ls='ls --color=auto'
+alias ls='eza --icons --group-directories-first'
 alias grep='grep --color=auto'
-alias ll='ls -la'
+alias ll='eza --icons --group-directories-first -la'
 alias vim='nvim'
 alias kssh='kitty +kitten ssh'
 alias icat='kitty +kitten icat'
