@@ -19,7 +19,14 @@
 	     "tray"
     ],
     "hyprland/window": {
-	    "format": "{}",
+	    "format": "{class}",
+        "rewrite": {
+            "com.obsproject.Studio": "OBS Studio",
+            "org.gnome.Nautilus": "Nautilus",
+            "firefox": "Firefox",
+            "kitty": "Kitty",
+            "discord": "Discord"
+        },
 	    "separate-outputs": true
     },
     "hyprland/workspaces": {
