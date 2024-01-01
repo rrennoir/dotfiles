@@ -20,6 +20,12 @@
           "type": "git"
         },
         {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#0dd90d",
+          "template": " {{ .Major }}.{{ .Minor }} "
+        },
+        {
           "foreground": "#43D426",
           "style": "plain",
           "template": "\u276f ",
