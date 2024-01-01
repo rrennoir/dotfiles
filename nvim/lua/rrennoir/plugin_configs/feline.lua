@@ -217,4 +217,3 @@ feline.setup({
   components = components,
   vi_mode_colors = MODE_COLORS,
 })
-
