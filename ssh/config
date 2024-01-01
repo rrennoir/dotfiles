@@ -1,75 +1,96 @@
+Host 10.11.1.165
+    HostName 10.11.1.165
+    User user
+    IdentityFile ~/.ssh/rre_cetic
+
+Host 10.11.1.161
+    HostName 10.11.1.161
+    User user
+    IdentityFile ~/.ssh/rre_cetic
+
 Host imagine
-  HostName imagine.home.arpa
-  User rre
-  IdentityFile ~/.ssh/rre_cetic
+    HostName imagine.home.arpa
+    User rre
+    IdentityFile ~/.ssh/rre_cetic
 
 Host skillissue
-  HostName skillissue.be
-  User ubuntu
-  IdentityFile ~/.ssh/aws_rrennoir
+    HostName skillissue.be
+    User ubuntu
+    IdentityFile ~/.ssh/aws_rrennoir
 
 Host github.com
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/github
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
 
 Host github_rrennoir
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/github_rrennoir
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_rrennoir
 
 Host github.com-rrennoir
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/github-rrennoir
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github-rrennoir
 
 Host git.cetic.be
-  HostName git.cetic.be
-  User git
-  IdentityFile ~/.ssh/gitlab
+    HostName git.cetic.be
+    User git
+    IdentityFile ~/.ssh/gitlab
 
 Host gitlab.com
-  HostName gitlab.com
-  User git
-  IdentityFile ~/.ssh/gitlab
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/gitlab
 
 Host gitlab-rrennoir
-  HostName gitlab.com
-  IdentityFile ~/.ssh/gitlab_rrennoir
-  IdentitiesOnly yes
+    HostName gitlab.com
+    IdentityFile ~/.ssh/gitlab_rrennoir
+    IdentitiesOnly yes
 
-Host ariac-prod
-  HostName factory.trail.ac
-  User debian
-  IdentityFile ~/.ssh/rre_ariac
+Host chu_qa
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9000
 
-Host ariac-dev
-  HostName 10.129.1.37
-  User rre
-  IdentityFile ~/.ssh/rre_cetic
+Host chu_prod
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9001
 
-Host okd-bootstrap
-  HostName bootstrap.cyberexcellence.ext.cetic.be
-  User core
-  IdentityFile ~/Documents/Git/cyberexcellence/factory-backend/openshift
+Host chu_etl
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9002
 
-Host okd-master0
-  HostName master0.cyberexcellence.ext.cetic.be
-  User core
-  IdentityFile ~/.ssh/rre_cetic
+Host chu_pseudo
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9003
 
-Host okd-master1
-  HostName master1.cyberexcellence.ext.cetic.be
-  User core
-  IdentityFile ~/.ssh/rre_cetic
+Host chu_fratem_qa
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9004
 
-Host okd-master2
-  HostName master2.cyberexcellence.ext.cetic.be
-  User core
-  IdentityFile ~/.ssh/rre_cetic
+Host chu_fratem_pseudo
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9006
 
-Host okd-services
-  HostName okd4-services.cyberexcellence.ext.cetic.be
-  User core
-  IdentityFile ~/.ssh/rre_cetic
+Host chu_fratem_etl
+    Hostname inah-gw.ext.cetic.be
+    User admininah
+    IdentityFile ~/.config/inah/keys/admin
+    Port 9005
 
+Include ~/config.d/cyberexcellence
+
+# CETIC hosts
+Include config.d/*
