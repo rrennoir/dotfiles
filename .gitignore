@@ -1,3 +1,4 @@
-.ssh/*
-!.ssh/config
-
+ssh/*
+!ssh/config
+nvim/lazy-lock.json
+kitty/kitty.conf.bak
