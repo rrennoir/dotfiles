@@ -1,21 +1,12 @@
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh --config $HOME/dotfiles/powerlevel10k_leanV2.omp.json)"
+    eval "$(oh-my-posh init zsh --config $HOME/dotfiles/zsh/powerlevel10k_lean.omp.json)"
 fi
-
-# pfetch (with kitties) ASCII art 
-export PF_ASCII="Catppuccin"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-export JAVA_20_HOME=$(/usr/libexec/java_home -v20)
-
-export JAVA_HOME=$JAVA_20_HOME
 
 # Fuck vim, long live neovim
 alias vim="nvim"
@@ -28,13 +19,8 @@ if [ "$TERM" = "xterm-kitty" ]; then
     alias icat="kitty +kitten icat"
 fi
 
-# pfetch with kitties (https://github.com/andreasgrafen/pfetch-with-kitties)
-alias pfetch=~/pfetch
-
 # ZSH auto suggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-pfetch
 
 # fzf command history fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
