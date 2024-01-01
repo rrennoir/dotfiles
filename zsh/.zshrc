@@ -6,12 +6,12 @@ fi
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+# if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # Fuck vim, long live neovim
 alias vim="nvim"
 
-alias ls="ls --color=auto"
+alias ls="eza --icons --group-directories-first"
 alias ll="ls -l"
 
 if [ "$TERM" = "xterm-kitty" ]; then
@@ -38,3 +38,5 @@ if type brew &>/dev/null; then
 
 # Kubectl autocompletions
 source <(kubectl completion zsh)
+source /opt/homebrew/share/zsh/site-functions/aws_zsh_completer.sh
+source /opt/homebrew/share/zsh/site-functions/_eksctl
