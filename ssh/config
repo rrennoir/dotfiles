@@ -1,12 +1,7 @@
-Host 10.11.1.165
-    HostName 10.11.1.165
-    User user
-    IdentityFile ~/.ssh/rre_cetic
+# vim: ft=sshconfig
 
-Host 10.11.1.161
-    HostName 10.11.1.161
-    User user
-    IdentityFile ~/.ssh/rre_cetic
+# CETIC hosts
+Include config.d/*
 
 Host imagine
     HostName imagine.home.arpa
@@ -21,76 +16,9 @@ Host skillissue
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/github
-
-Host github_rrennoir
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/github_rrennoir
-
-Host github.com-rrennoir
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/github-rrennoir
-
-Host git.cetic.be
-    HostName git.cetic.be
-    User git
-    IdentityFile ~/.ssh/gitlab
+    # IdentityFile not needed, using .gitconfig
 
 Host gitlab.com
     HostName gitlab.com
     User git
-    IdentityFile ~/.ssh/gitlab
-
-Host gitlab-rrennoir
-    HostName gitlab.com
-    IdentityFile ~/.ssh/gitlab_rrennoir
-    IdentitiesOnly yes
-
-Host chu_qa
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9000
-
-Host chu_prod
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9001
-
-Host chu_etl
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9002
-
-Host chu_pseudo
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9003
-
-Host chu_fratem_qa
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9004
-
-Host chu_fratem_pseudo
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9006
-
-Host chu_fratem_etl
-    Hostname inah-gw.ext.cetic.be
-    User admininah
-    IdentityFile ~/.config/inah/keys/admin
-    Port 9005
-
-Include ~/config.d/cyberexcellence
-
-# CETIC hosts
-Include config.d/*
+    # IdentityFile not needed, using .gitconfig
