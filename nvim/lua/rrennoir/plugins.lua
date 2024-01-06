@@ -13,7 +13,13 @@ require("lazy").setup({
     "mbbill/undotree",
     "tpope/vim-fugitive",
     "freddiehaddad/feline.nvim",
-    "theprimeagen/harpoon",
+    {
+        "theprimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        }
+    },
     "ranjithshegde/ccls.nvim",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
