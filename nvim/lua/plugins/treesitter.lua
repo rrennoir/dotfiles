@@ -3,7 +3,7 @@ return {
     build = ":TSUpdate",
     config = function()
         local treeshitter_config = require("nvim-treesitter.configs")
-        treeshitter_config.setup( {
+        treeshitter_config.setup({
             ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "python" },
             sync_install = false,
             auto_install = true,
