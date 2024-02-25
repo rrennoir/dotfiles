@@ -14,6 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 require("config.options")
 require("config.remaps")
 
-require("lazy").setup("plugins")
+require("lazy").setup(
+    "plugins",
+    {
+        checker = {
+            enabled = true,
+        }
+    })
 
 vim.cmd("colorscheme catppuccin-macchiato")
