@@ -1,13 +1,13 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
+    // "height": 40, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (0px)
     "modules-left": [
-	    "hyprland/workspaces"
+	    "hyprland/workspaces",
+	    "hyprland/window"
     ],
     "modules-center": [
-	    "hyprland/window"
     ],
     "modules-right": [
 	     "wireplumber",
@@ -55,7 +55,7 @@
         }
     },
     "cpu": {
-        "format": "{usage}% / {avg_frequency} GHz",
+        "format": "{usage}%",
 	    "interval": 5,
         "critical-threshold": 80,
     },
@@ -74,7 +74,7 @@
     },
     "network": {
         "interval": 5,
-        "format-ethernet": "󰈁 {ipaddr}",
+        "format-ethernet": "󰈁",
         "format-wifi": "󰖩 {signalStrength}%",
         "format-disconnected": "󰈂",
         "tooltip-format-ethernet": "󰈁 {ipaddr}/{cidr} via {gwaddr}",

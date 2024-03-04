@@ -7,11 +7,11 @@
     font-weight: bold;
     font-size: 14px;
     min-height: 0;
-    margin: 0.1rem 0;
 }
 
 window#waybar {
-    background: @crust;
+    /* background: @crust; */
+    background: transparent;
 }
 
 tooltip {
@@ -24,31 +24,31 @@ tooltip {
 
 .modules-right {
     color: @text;
-    background: @surface0;
-    border-radius: 1rem 0 0 1rem;
+    background: @crust;
+    border-radius: 0 0 0 1rem;
 }
 
 .modules-center {
     color: @text;
-    background: @surface0;
-    border-radius: 1rem;
+    background: @crust;
+    border-radius: 0 1rem 1rem 0;
 }
 
 .modules-left {
     color: @text;
     background: @surface0;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0 1rem 0;
 }
 
 #workspaces button {
+    background: @sapphire;
     color: @crust;
     margin: 0.1rem 0.5rem 0.1rem 0;
-    background: @rosewater;
     border-radius: 1rem;
 }
 
 #workspaces button.active {
-    background: @sapphire;
+    background: @rosewater;
 }
 
 #workspaces button.urgent {
@@ -73,10 +73,11 @@ tooltip {
 }
 
 #workspaces {
+    background: @crust;
     padding-left: 1rem;
     padding-right: 0.3rem;
+    border-radius: 0 1rem 1rem 0;
 }
 
 #window {
-    margin: 0 1rem;
 }
