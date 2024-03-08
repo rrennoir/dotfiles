@@ -1,0 +1,11 @@
+# Automatically enable LSP in vscode and vim/neovim
+# code: language=ansible
+# vim: ft=yaml.ansible
+
+- name: Install git
+  become: true
+  community.general.pacman:
+    name: git
+    state: installed
+    upgrade: true
+    update_cache: true

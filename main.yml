@@ -1,0 +1,23 @@
+# Automatically enable LSP in vscode and vim/neovim
+# code: language=ansible
+# vim: ft=yaml.ansible
+
+- name: Configure Dotfiles
+  hosts: localhost
+  connection: local
+  vars:
+    ansible_user: arch
+  tasks:
+    #- name:  Include role for hyprland
+    #  ansible.builtin.include_role:
+    #    role: hyprland
+    # - name:  Include role for yay
+    #   ansible.builtin.include_role:
+    #     role: yay
+    - name: Include role for git configuration
+      ansible.builtin.include_role:
+        role: git
+
+    #- name: Include role for nvim
+    #  ansible.builtin.include_role:
+    #    role: nvim

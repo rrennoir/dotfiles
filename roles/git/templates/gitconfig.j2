@@ -1,0 +1,8 @@
+[includeIf "gitdir:{{ git_dir_work }}/"]
+path = {{ git_dir_work }}/.gitconfig.work
+
+[includeIf "gitdir:{{ git_dir_personal }}/"]
+path = {{ git_dir_personal }}/personal/.gitconfig.personal
+
+[core]
+excludesfile = ~/.gitignore

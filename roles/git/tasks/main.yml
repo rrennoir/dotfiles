@@ -1,0 +1,79 @@
+# Automatically enable LSP in vscode and vim/neovim
+# code: language=ansible
+# vim: ft=yaml.ansible
+
+- name: Include Debian tasks
+  ansible.builtin.include_tasks:
+    file: debian.yml
+  when: ansible_facts["os_family"] == "Debian"
+
+- name: Include Archlinux tasks
+  ansible.builtin.include_tasks:
+    file: arch.yml
+  when: ansible_facts["os_family"] == "Archlinux"
+
+- name: Create personal directory
+  ansible.builtin.file:
+    path: "{{ git_dir_personal }}"
+    state: directory
+    mode: "700"
+    owner: "{{ ansible_user }}"
+
+- name: Create work directory
+  ansible.builtin.file:
+    path: "{{ git_dir_work }}"
+    state: directory
+    mode: "700"
+    owner: "{{ ansible_user }}"
+
+- name: Create link from HOME to personal directory
+  ansible.builtin.file:
+    src: "{{ git_dir_personal }}"
+    dest: "{{ git_link_personal }}"
+    state: link
+
+- name: Create link from HOME to work directory
+  ansible.builtin.file:
+    src: "{{ git_dir_work }}"
+    dest: "{{ git_link_work }}"
+    state: link
+
+- name: Create work git config
+  ansible.builtin.template:
+    src: gitconfig.work.j2
+    dest: "{{ git_dir_work }}/.gitconfig.work"
+    owner: "{{ ansible_user }}"
+    mode: "600"
+
+- name: Create personal git config
+  ansible.builtin.template:
+    src: gitconfig.personal.j2
+    dest: "{{ git_dir_personal }}/.gitconfig.personal"
+    owner: "{{ ansible_user }}"
+    mode: "600"
+
+- name: Make sure .ssh directory exit
+  ansible.builtin.file:
+    path: "{{ dot_ssh_directory }}"
+    state: directory
+    owner: "{{ ansible_user }}"
+    mode: "700"
+
+- name: Make sure .ssh/config exit
+  ansible.builtin.file:
+    path: "{{ ssh_config_path }}"
+    state: touch
+    owner: "{{ ansible_user }}"
+    mode: "644"
+
+- name: Create GitHub entry in .ssh/config
+  ansible.builtin.blockinfile:
+    path: "{{ ssh_config_path }}"
+    block: |
+      Host github.com
+        HostName github.com
+        User git
+
+      Host gitlab.com
+        HostName gitlab.com
+        User git

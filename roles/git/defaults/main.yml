@@ -1,0 +1,10 @@
+dot_ssh_directory: "{{ ansible_env.HOME }}/.ssh"
+ssh_config_path: "{{ dot_ssh_directory }}/config"
+ssh_key_path_personal: "{{ dot_ssh_directory }}/rre"
+ssh_key_path_work: "{{ dot_ssh_directory }}/rre_cetic"
+
+git_dir_base: "{{ ansible_env.HOME }}/Documents/Git"
+git_dir_personal: "{{ git_dir_base }}/personal"
+git_dir_work: "{{ git_dir_base }}/work"
+git_link_personal: "{{ ansible_env.HOME }}/personal"
+git_link_work: "{{ ansible_env.HOME }}/work"

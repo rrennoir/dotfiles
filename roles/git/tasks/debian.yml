@@ -1,0 +1,9 @@
+# Automatically enable LSP in vscode and vim/neovim
+# code: language=ansible
+# vim: ft=yaml.ansible
+
+- name: Install git
+  ansible.builtin.apt:
+    name: git
+    state: present
+    update_cache: true
