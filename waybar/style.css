@@ -10,8 +10,8 @@
 }
 
 window#waybar {
-    /* background: @crust; */
-    background: transparent;
+    background: @surface0;
+    /*background: transparent; */
 }
 
 tooltip {
@@ -26,29 +26,47 @@ tooltip {
     color: @text;
     background: @crust;
     border-radius: 0 0 0 1rem;
+    border-color: @green;
+    border-style: solid;
+    border-width: 0rem 0rem 0.1rem 0.1rem;
 }
 
 .modules-center {
     color: @text;
     background: @crust;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0 1rem;
+    border-color: @green;
+    border-style: solid;
+    border-width: 0rem 0.1rem 0.1rem 0.1rem;
 }
 
 .modules-left {
     color: @text;
-    background: @surface0;
+    background: @crust;
     border-radius: 0 0 1rem 0;
+    border-color: @green;
+    border-style: solid;
+    border-width: 0rem 0.1rem 0.1rem 0rem;
 }
 
 #workspaces button {
-    background: @sapphire;
+    background: @peach;
     color: @crust;
-    margin: 0.1rem 0.5rem 0.1rem 0;
-    border-radius: 1rem;
+    border-radius: 35%;
+    margin: 0.3rem; 
+}
+
+#workspaces button.empty {
+    background: @teal;
+}
+
+#workspaces button.visible {
+    background: @blue;
 }
 
 #workspaces button.active {
-    background: @rosewater;
+    background: @green;
 }
 
 #workspaces button.urgent {
@@ -61,23 +79,34 @@ tooltip {
 
 #window,
 #mpris,
-#clock,
 #wireplumber,
 #temperature,
 #tray,
 #cpu,
+#clock,
 #network,
+#custom-archicon,
 #memory {
     color: @text;
-    padding: 3px 10px;
+    padding: 0.2rem 0.5rem;
 }
 
 #workspaces {
-    background: @crust;
-    padding-left: 1rem;
     padding-right: 0.3rem;
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 0rem 0rem 1rem 0rem;
+    border-style: solid;
+    border-width: 0rem 0.1rem 0rem 0rem;
+    border-color: @green;
+}
+
+#wireplumber.muted {
+    color: @red
 }
 
 #window {
+    padding: 0rem 1rem;
+}
+
+#custom-archicon {
+    padding: 0rem 1rem;
 }

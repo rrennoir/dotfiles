@@ -4,35 +4,46 @@
     // "height": 40, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (0px)
     "modules-left": [
-	    "hyprland/workspaces",
-	    "hyprland/window"
+        "custom/archicon",
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
-	     "wireplumber",
-	     "cpu",
-         "temperature",
-	     "memory",
-         "network",
-	     "clock",
-	     "tray"
+        "mpris",
+        "wireplumber",
+        "cpu",
+        "temperature",
+        "memory",
+        "network",
+        "tray"
     ],
+    "custom/archicon": {
+        "format": " ",
+        "tooltip": false
+    },
     "hyprland/window": {
-	    "format": "{class}",
+        "format": "{class}",
         "rewrite": {
             "com.obsproject.Studio": "OBS Studio",
             "org.gnome.Nautilus": "Nautilus",
             "firefox": "Firefox",
             "kitty": "Kitty",
-            "discord": "Discord"
+            "discord": "Discord",
+            "steam": "Steam",
+            "": "Desktop"
         },
-	    "separate-outputs": true
+        "separate-outputs": true
     },
     "hyprland/workspaces": {
         "format": "{id}",
         "active-only": false,
         "sort-by": "number",
+        "persistent-workspaces": {
+            "*": 5
+        }
     },
     "tray": {
         "spacing": 5
@@ -42,7 +53,7 @@
         "timezone": "Europe/Brussels",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    	"format": "{:%d/%m/%Y %H:%M:%S}",
+        "format": "{:%d/%m/%Y %H:%M:%S}",
         "calendar": {
             "mode": "month",
             "on-scroll": 1,
@@ -56,7 +67,7 @@
     },
     "cpu": {
         "format": "{usage}%",
-	    "interval": 5,
+        "interval": 5,
         "critical-threshold": 80,
     },
     "temperature": {
@@ -66,11 +77,13 @@
     },
     "memory": {
         "format": "{used} GiB",
-    	"interval": 5
+        "interval": 5
     },
     "wireplumber": {
-	    "format": "  {volume}%",
-        "format-muted": "  {volume}%"
+        "format": "{icon}",
+        "format-muted": "🔇",
+        "format-icons": ["🔈", "🔉", "🔊"],
+        "tooltip-format": "{volume}% {node_name}"
     },
     "network": {
         "interval": 5,
@@ -80,6 +93,15 @@
         "tooltip-format-ethernet": "󰈁 {ipaddr}/{cidr} via {gwaddr}",
         "tooltip-format-wifi": "󰖩 {ipaddr}/{cidr} on {essid}",
         "tooltip-format-disconnected": "Disconnected",
+    },
+    "mpris": {
+        "format": "{player_icon} {status_icon}",
+        "interval": 1,
+        "status-icons": {
+            "playing": "▶️",
+            "paused": "⏸️",
+            "stopped": "⏹️"
+        }
     }
 }
 
