@@ -22,7 +22,8 @@
     ],
     "custom/archicon": {
         "format": "  ",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "wlogout"
     },
     "hyprland/window": {
         "format": "{class}",

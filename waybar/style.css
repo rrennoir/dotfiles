@@ -116,6 +116,11 @@ tooltip {
     border-width: 0rem 0rem 0rem 0.1rem;
     border-color: @green;
 }
+
 #custom-archicon {
     padding: 0rem 1rem;
+}
+
+#custom-archicon:hover {
+    color: @green;
 }
