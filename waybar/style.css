@@ -29,6 +29,7 @@ tooltip {
     border-color: @green;
     border-style: solid;
     border-width: 0rem 0rem 0.1rem 0.1rem;
+    padding-right: 1rem;
 }
 
 .modules-center {
@@ -107,6 +108,14 @@ tooltip {
     padding: 0rem 1rem;
 }
 
+#tray {
+    margin-left: 0.6rem;
+    padding-left: 1rem;
+    border-radius: 0rem 0rem 0rem 1rem;
+    border-style: solid;
+    border-width: 0rem 0rem 0rem 0.1rem;
+    border-color: @green;
+}
 #custom-archicon {
     padding: 0rem 1rem;
 }

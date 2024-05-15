@@ -21,7 +21,7 @@
         "tray"
     ],
     "custom/archicon": {
-        "format": " ",
+        "format": "  ",
         "tooltip": false
     },
     "hyprland/window": {
@@ -46,7 +46,7 @@
         }
     },
     "tray": {
-        "spacing": 5
+        "spacing": 10
     },
     "clock": {
         "interval": 5,
