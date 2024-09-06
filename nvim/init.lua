@@ -18,8 +18,9 @@ require("lazy").setup(
     "plugins",
     {
         checker = {
-            enabled = true,
+            enabled = false,
         }
     })
 
-vim.cmd("colorscheme catppuccin-macchiato")
+-- vim.cmd("colorscheme catppuccin-macchiato")
+vim.cmd("colorscheme gruvbox")
