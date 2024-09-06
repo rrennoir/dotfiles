@@ -40,3 +40,4 @@ if type brew &>/dev/null; then
 source <(kubectl completion zsh)
 source /opt/homebrew/share/zsh/site-functions/aws_zsh_completer.sh
 source /opt/homebrew/share/zsh/site-functions/_eksctl
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
