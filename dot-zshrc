@@ -1,5 +1,5 @@
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh --config $HOME/dotfiles/zsh/powerlevel10k_lean.omp.json)"
+    eval "$(oh-my-posh init zsh --config $HOME/dotfiles/dot-config/oh-my-posh/powerlevel10k_lean.omp.json)"
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
