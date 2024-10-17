@@ -20,7 +20,7 @@
             pkgs.keepassxc
             pkgs.discord
             pkgs.spotify
-            pkgs.zed-editor
+            # pkgs.zed-editor
             # pkgs.obs-studio # unsupported platform
             # pkgs.thunderbird # unsupported platform
             # pkgs.bitwarden # unsupported platform
@@ -68,6 +68,7 @@
         casks = [
           "tunnelblick"
           "obsidian"
+          "zed"
         ];
         masApps = {
           "Magnet" = 441258766;
