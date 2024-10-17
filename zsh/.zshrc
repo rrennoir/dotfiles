@@ -3,7 +3,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+#if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
 # if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
@@ -19,25 +19,7 @@ if [ "$TERM" = "xterm-kitty" ]; then
     alias icat="kitty +kitten icat"
 fi
 
-# ZSH auto suggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# fzf command history fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# ZSH syntax highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# ZSH Autocomplete
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
-  fi
+eval "$(zoxide init zsh --cmd cd)"
 
 # Kubectl autocompletions
-source <(kubectl completion zsh)
-source /opt/homebrew/share/zsh/site-functions/aws_zsh_completer.sh
-source /opt/homebrew/share/zsh/site-functions/_eksctl
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+#source <(kubectl completion zsh)
