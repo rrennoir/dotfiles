@@ -3,22 +3,35 @@
 # CETIC hosts
 Include config.d/*
 
-Host imagine
-    HostName imagine.home.arpa
-    User rre
-    IdentityFile ~/.ssh/rre_cetic
+Host patrick
+    HostName patrick.skillissue.be
+    User admin
+    IdentityFile ~/.ssh/rre-aws-eu-north-1-personal
+    AddressFamily inet6
 
-Host skillissue
-    HostName skillissue.be
-    User ubuntu
-    IdentityFile ~/.ssh/aws_rrennoir
+Host bob
+    HostName bob.skillissue.be
+    User admin
+    IdentityFile ~/.ssh/rre-aws-eu-north-1-personal
+
+Host rpi5
+    HostName rpi5.rennoir.be
+    User rre
+    IdentityFile ~/.ssh/rre
 
 Host github.com
     HostName github.com
     User git
+    IdentityFile ~/.ssh/rre_perso_2024
     # IdentityFile not needed, using .gitconfig
 
 Host gitlab.com
     HostName gitlab.com
     User git
     # IdentityFile not needed, using .gitconfig
+
+Host git.skillissue.be
+    HostName git.skillissue.be
+    User git
+    Identityfile ~/.ssh/rre_perso_2024
+    Port 2222
