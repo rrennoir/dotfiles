@@ -63,7 +63,7 @@
         global.autoUpdate = false;
         onActivation.cleanup = "zap";
         brews = [
-          "pinentry"
+          "pinentry-mac"
         ];
         casks = [
           "tunnelblick"
