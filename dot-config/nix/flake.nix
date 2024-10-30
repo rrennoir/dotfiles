@@ -107,7 +107,8 @@
           dock = {
             autohide = true;
             persistent-apps = [
-              "/Applications/Safari.app"
+              "/System/Applications/System Settings.app"
+              "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Nix Apps/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
