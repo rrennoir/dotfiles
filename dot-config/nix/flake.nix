@@ -69,6 +69,7 @@
           "tunnelblick"
           "obsidian"
           "zed"
+          "helm"
         ];
         masApps = {
           "Magnet" = 441258766;
