@@ -38,7 +38,7 @@
             pkgs.fastfetch
     	    pkgs.stow
             pkgs.jq
-            pkgs.yq
+            # pkgs.yq # out of date still v3
             pkgs.gnupg
             pkgs.glab
             pkgs.gh
@@ -65,6 +65,7 @@
         brews = [
           "pinentry-mac"
           "helm"
+          "yq"
         ];
         casks = [
           "tunnelblick"
