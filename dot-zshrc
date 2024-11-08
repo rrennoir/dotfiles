@@ -10,9 +10,10 @@ fi
 
 # Fuck vim, long live neovim
 alias vim="nvim"
-
+alias kctl="kubectl"
 alias ls="eza --icons --group-directories-first"
 alias ll="ls -l"
+alias mac-rebuild-nix="darwin-rebuild switch --flake ~/dotfiles/dot-config/nix"
 
 if [ "$TERM" = "xterm-kitty" ]; then
     alias kssh="kitty +kitten ssh"
