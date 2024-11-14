@@ -14,7 +14,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-            pkgs.kitty
+            # pkgs.kitty # Issue in MacOS 15.1 (X can't open 'null')
             # pkgs.raycast # out of date
             pkgs.neovim
             pkgs.keepassxc
@@ -71,6 +71,7 @@
           "tunnelblick"
           "obsidian"
           "zed"
+          "kitty"
         ];
         masApps = {
           "Magnet" = 441258766;
@@ -111,7 +112,8 @@
             persistent-apps = [
               "/System/Applications/System Settings.app"
               "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-              "/Applications/Nix Apps/kitty.app"
+              # "/Applications/Nix Apps/kitty.app"
+              "/Applications/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
           };
