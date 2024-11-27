@@ -20,6 +20,7 @@
             pkgs.keepassxc
             pkgs.discord
             pkgs.spotify
+            pkgs.krita
             # pkgs.zed-editor
             # pkgs.obs-studio # unsupported platform
             # pkgs.thunderbird # unsupported platform
@@ -72,6 +73,7 @@
           "obsidian"
           "zed"
           "kitty"
+          "postman"
         ];
         masApps = {
           "Magnet" = 441258766;
@@ -112,7 +114,6 @@
             persistent-apps = [
               "/System/Applications/System Settings.app"
               "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-              # "/Applications/Nix Apps/kitty.app"
               "/Applications/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
