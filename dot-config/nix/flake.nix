@@ -20,7 +20,7 @@
             pkgs.keepassxc
             pkgs.discord
             pkgs.spotify
-            pkgs.krita
+            # pkgs.krita # unsupported platform
             # pkgs.zed-editor
             # pkgs.obs-studio # unsupported platform
             # pkgs.thunderbird # unsupported platform
@@ -55,7 +55,7 @@
             pkgs.ansible
             pkgs.ansible-lint
             pkgs.terraform # or pkgs.opentofu
-            # pkgs.helm # Doesn't exist in aarch64-darwin
+            # pkgs.helm # unsupported platform
             pkgs.glow
         ];
 
@@ -74,6 +74,7 @@
           "zed"
           "kitty"
           "postman"
+          "krita"
         ];
         masApps = {
           "Magnet" = 441258766;
