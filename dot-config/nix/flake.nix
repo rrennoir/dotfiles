@@ -56,6 +56,7 @@
             pkgs.ansible-lint
             pkgs.terraform # or pkgs.opentofu
             # pkgs.helm # unsupported platform
+            pkgs.kustomize
             pkgs.glow
             pkgs.python312
         ];
