@@ -57,6 +57,7 @@
             pkgs.terraform # or pkgs.opentofu
             # pkgs.helm # unsupported platform
             pkgs.glow
+            pkgs.python312
         ];
 
       homebrew = {
