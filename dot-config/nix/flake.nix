@@ -86,7 +86,7 @@
       };
 
       fonts.packages = [
-        (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+        pkgs.nerd-fonts.jetbrains-mono
       ];
 
       # Auto upgrade nix package and the daemon service.
