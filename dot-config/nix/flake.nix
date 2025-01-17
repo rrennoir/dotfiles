@@ -59,6 +59,7 @@
             pkgs.kustomize
             pkgs.glow
             pkgs.python312
+            pkgs.yt-dlp
         ];
 
       homebrew = {
