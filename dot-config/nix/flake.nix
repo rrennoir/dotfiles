@@ -30,6 +30,7 @@
             pkgs.nodejs
             pkgs.go
             pkgs.git
+            pkgs.git-lfs
             pkgs.oh-my-posh
             pkgs.zoxide
             pkgs.ranger
@@ -59,6 +60,7 @@
             pkgs.kustomize
             pkgs.glow
             pkgs.python312
+            pkgs.ffmpeg
             pkgs.yt-dlp
         ];
 
@@ -117,7 +119,8 @@
             autohide = true;
             persistent-apps = [
               "/System/Applications/System Settings.app"
-              "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+              # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+              "/Applications/Brave.app"
               "/Applications/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
