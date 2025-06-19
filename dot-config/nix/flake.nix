@@ -14,17 +14,17 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-            # pkgs.kitty # Issue in MacOS 15.1 (X can't open 'null')
-            # pkgs.raycast # out of date
+            pkgs.kitty
+            pkgs.raycast
             pkgs.neovim
             pkgs.keepassxc
             pkgs.discord
             pkgs.spotify
             # pkgs.krita # unsupported platform
-            # pkgs.zed-editor
+            pkgs.zed-editor
             # pkgs.obs-studio # unsupported platform
-            # pkgs.thunderbird # unsupported platform
-            # pkgs.bitwarden # unsupported platform
+            pkgs.thunderbird
+            # pkgs.bitwarden-desktop # using the AppStore version instead
             pkgs.utm
             pkgs.lua-language-server
             pkgs.nodejs
@@ -40,7 +40,7 @@
             pkgs.fastfetch
     	    pkgs.stow
             pkgs.jq
-            # pkgs.yq # out of date still v3
+            pkgs.yq-go
             pkgs.gnupg
             pkgs.glab
             pkgs.gh
@@ -56,7 +56,7 @@
             pkgs.ansible
             pkgs.ansible-lint
             pkgs.terraform # or pkgs.opentofu
-            # pkgs.helm # unsupported platform
+            pkgs.kubernetes-helm
             pkgs.kustomize
             pkgs.glow
             pkgs.python312
@@ -66,18 +66,14 @@
 
       homebrew = {
         enable = true;
-        global.autoUpdate = false;
+        global.autoUpdate = true;
         onActivation.cleanup = "zap";
         brews = [
           "pinentry-mac"
-          "helm"
-          "yq"
         ];
         casks = [
           "tunnelblick"
           "obsidian"
-          "zed"
-          "kitty"
           "postman"
           "krita"
         ];
@@ -121,7 +117,7 @@
               "/System/Applications/System Settings.app"
               # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Brave Browser.app"
-              "/Applications/kitty.app"
+              "/Applications/Nix Apps/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
           };
