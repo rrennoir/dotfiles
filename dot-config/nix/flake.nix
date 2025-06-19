@@ -120,7 +120,7 @@
             persistent-apps = [
               "/System/Applications/System Settings.app"
               # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-              "/Applications/Brave.app"
+              "/Applications/Brave Browser.app"
               "/Applications/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
