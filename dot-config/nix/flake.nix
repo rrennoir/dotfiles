@@ -93,7 +93,6 @@
       ];
 
       # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
@@ -114,6 +113,7 @@
       # Set Git commit hash for darwin-version.
       system = {
         configurationRevision = self.rev or self.dirtyRev or null;
+        primaryUser = "rre";
         defaults = {
           dock = {
             autohide = true;
@@ -131,6 +131,7 @@
             ShowStatusBar = false;
           };
         };
+
 
         # Used for backwards compatibility, please read the changelog before changing.
         # $ darwin-rebuild changelog
