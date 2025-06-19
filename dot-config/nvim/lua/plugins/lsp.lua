@@ -36,7 +36,7 @@ return {
             end)
 
             require('mason-lspconfig').setup({
-                ensure_installed = { "rust_analyzer" },
+                ensure_installed = { "rust_analyzer", "ansiblels" },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
