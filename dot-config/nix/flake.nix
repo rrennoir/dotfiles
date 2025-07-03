@@ -62,6 +62,8 @@
             pkgs.python312
             pkgs.ffmpeg
             pkgs.yt-dlp
+            pkgs.jetbrains.idea-ultimate
+            pkgs.jetbrains.pycharm-professional
         ];
 
       homebrew = {
@@ -76,6 +78,7 @@
           "obsidian"
           "postman"
           "krita"
+          "mas"
         ];
         masApps = {
           "Magnet" = 441258766;
