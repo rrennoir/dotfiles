@@ -72,13 +72,13 @@
         onActivation.cleanup = "zap";
         brews = [
           "pinentry-mac"
+          "mas"
         ];
         casks = [
           "tunnelblick"
           "obsidian"
           "postman"
           "krita"
-          "mas"
         ];
         masApps = {
           "Magnet" = 441258766;
