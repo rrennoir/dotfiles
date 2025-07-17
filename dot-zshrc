@@ -15,9 +15,21 @@ alias ls="eza --icons --group-directories-first"
 alias ll="ls -l"
 alias mac-rebuild-nix="sudo darwin-rebuild switch --flake ~/dotfiles/dot-config/nix"
 
+sshi () { 
+    SSH_HOST=$(rg -NIo 'Host (.*)' -r '$1' .ssh/ | fzf)
+    echo "Connecting to $SSH_HOST"
+    ssh $@ $SSH_HOST
+}
+
 if [ "$TERM" = "xterm-kitty" ]; then
     alias kssh="kitty +kitten ssh"
     alias icat="kitty +kitten icat"
+
+    ksshi () { 
+        SSH_HOST=$(rg -NIo 'Host (.*)' -r '$1' .ssh/ | fzf)
+        echo "Connecting to $SSH_HOST"
+        kitty +kitten ssh $@ $SSH_HOST
+    }
 fi
 
 eval "$(zoxide init zsh --cmd cd)"
