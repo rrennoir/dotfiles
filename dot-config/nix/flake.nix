@@ -107,6 +107,9 @@
         };
       };
 
+      power.sleep.computer = 15;
+      power.sleep.display = 5;
+
       security.pam.services.sudo_local.touchIdAuth = true;
 
       # Set Git commit hash for darwin-version.
@@ -115,7 +118,11 @@
         primaryUser = "rre";
         defaults = {
           dock = {
+            enable-spring-load-actions-on-all-items = false;
             autohide = true;
+            magnification = false;
+            mru-spaces = false;
+            orientation = "bottom";
             persistent-apps = [
               "/System/Applications/System Settings.app"
               # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
@@ -123,11 +130,40 @@
               "/Applications/Nix Apps/kitty.app"
               "/Applications/Nix Apps/Discord.app"
             ];
+            show-recents = false;
           };
           finder = {
+            AppleShowAllExtensions = false; # Shown by default except for apps
+            AppleShowAllFiles = false;
+            FXDefaultSearchScope = "SCcf"; # current folder
             FXPreferredViewStyle = "Nlsv";
+            NewWindowTarget = "Home";
             ShowPathbar = true;
-            ShowStatusBar = false;
+            ShowStatusBar = true;
+          };
+          NSGlobalDomain = {
+            AppleShowAllExtensions = false;
+            AppleShowAllFiles = false;
+            InitialKeyRepeat = 15;
+            KeyRepeat = 2;
+          };
+          WindowManager = {
+            EnableStandardClickToShowDesktop = true;
+            EnableTiledWindowMargins = false;
+            EnableTilingByEdgeDrag = true;
+            EnableTilingOptionAccelerator = true;
+            EnableTopTilingByEdgeDrag = true;
+          };
+          controlcenter = {
+            AirDrop = false; # show 18, hide 24
+            BatteryShowPercentage = true;
+            Bluetooth = true;
+            NowPlaying = true;
+            Sound = true;
+          };
+          screensaver = {
+            askForPassword = false;
+            askForPasswordDelay = 120;
           };
         };
 
