@@ -155,18 +155,17 @@
             EnableTopTilingByEdgeDrag = true;
           };
           controlcenter = {
-            AirDrop = false; # show 18, hide 24
-            BatteryShowPercentage = true;
+            AirDrop = false;
+            BatteryShowPercentage = false;
             Bluetooth = true;
             NowPlaying = true;
-            Sound = true;
+            Sound = false;
           };
           screensaver = {
             askForPassword = false;
             askForPasswordDelay = 120;
           };
         };
-
 
         # Used for backwards compatibility, please read the changelog before changing.
         # $ darwin-rebuild changelog
