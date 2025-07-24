@@ -150,9 +150,9 @@
           WindowManager = {
             EnableStandardClickToShowDesktop = true;
             EnableTiledWindowMargins = false;
-            EnableTilingByEdgeDrag = true;
-            EnableTilingOptionAccelerator = true;
-            EnableTopTilingByEdgeDrag = true;
+            EnableTilingByEdgeDrag = false; # Using magnet
+            EnableTilingOptionAccelerator = false; # Using magnet
+            EnableTopTilingByEdgeDrag = false; # Using magnet
           };
           controlcenter = {
             AirDrop = false;
