@@ -61,6 +61,7 @@
             pkgs.glow
             pkgs.python312
             pkgs.ffmpeg
+            pkgs.mpv
             pkgs.yt-dlp
             pkgs.jetbrains.idea-ultimate
             pkgs.jetbrains.pycharm-professional
