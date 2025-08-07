@@ -136,6 +136,8 @@
               "${pkgs.discord}/Applications/Discord.app"
             ];
             show-recents = false;
+            wvous-bl-corner = 4;
+            wvous-br-corner = 14; # Default (Note)
           };
           finder = {
             AppleShowAllExtensions = false; # Shown by default except for apps
