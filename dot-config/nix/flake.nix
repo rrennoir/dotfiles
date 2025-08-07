@@ -118,6 +118,9 @@
       system = {
         configurationRevision = self.rev or self.dirtyRev or null;
         primaryUser = "rre";
+        startup = {
+            chime = false;
+        };
         defaults = {
           dock = {
             enable-spring-load-actions-on-all-items = false;
@@ -129,8 +132,8 @@
               "/System/Applications/System Settings.app"
               # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Brave Browser.app"
-              "${pkgs.kitty}/Applications/Nix Apps/kitty.app"
-              "${pkgs.discord}/Applications/Nix Apps/Discord.app"
+              "${pkgs.kitty}/Applications/kitty.app"
+              "${pkgs.discord}/Applications/Discord.app"
             ];
             show-recents = false;
           };
@@ -139,6 +142,7 @@
             AppleShowAllFiles = false;
             FXDefaultSearchScope = "SCcf"; # current folder
             FXPreferredViewStyle = "Nlsv";
+            FXEnableExtensionChangeWarning = false;
             NewWindowTarget = "Home";
             ShowPathbar = true;
             ShowStatusBar = true;
