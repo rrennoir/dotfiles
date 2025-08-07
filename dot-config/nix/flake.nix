@@ -129,8 +129,8 @@
               "/System/Applications/System Settings.app"
               # "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
               "/Applications/Brave Browser.app"
-              "/Applications/Nix Apps/kitty.app"
-              "/Applications/Nix Apps/Discord.app"
+              "${pkgs.kitty}/Applications/Nix Apps/kitty.app"
+              "${pkgs.discord}/Applications/Nix Apps/Discord.app"
             ];
             show-recents = false;
           };
@@ -161,7 +161,7 @@
             BatteryShowPercentage = false;
             Bluetooth = true;
             NowPlaying = true;
-            Sound = true;
+            # Sound = true; # Removed in favor of show when active
           };
           screensaver = {
             askForPassword = false;
