@@ -65,6 +65,7 @@
             pkgs.yt-dlp
             pkgs.jetbrains.idea-ultimate
             pkgs.jetbrains.pycharm-professional
+            pkgs.sdl2-compat
         ];
 
       homebrew = {
@@ -160,7 +161,7 @@
             BatteryShowPercentage = false;
             Bluetooth = true;
             NowPlaying = true;
-            Sound = false;
+            Sound = true;
           };
           screensaver = {
             askForPassword = false;
