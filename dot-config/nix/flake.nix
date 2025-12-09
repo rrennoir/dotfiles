@@ -66,6 +66,7 @@
             pkgs.jetbrains.idea-ultimate
             pkgs.jetbrains.pycharm-professional
             pkgs.sdl2-compat
+            pkgs.podman
         ];
 
       homebrew = {
