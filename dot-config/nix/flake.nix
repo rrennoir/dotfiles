@@ -19,7 +19,7 @@
             pkgs.neovim
             pkgs.keepassxc
             pkgs.discord
-            # pkgs.spotify
+            pkgs.spotify
             # pkgs.krita # unsupported platform
             pkgs.zed-editor
             # pkgs.obs-studio # unsupported platform
