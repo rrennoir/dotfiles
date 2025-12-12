@@ -21,6 +21,10 @@ sshi () {
     ssh $@ $SSH_HOST
 }
 
+ssh-tsos() {
+    ssh -i ~/.ssh/tsos tsos@$@
+}
+
 if [ "$TERM" = "xterm-kitty" ]; then
     alias kssh="kitty +kitten ssh"
     alias icat="kitty +kitten icat"
