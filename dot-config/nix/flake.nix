@@ -63,8 +63,8 @@
             pkgs.ffmpeg
             pkgs.mpv
             pkgs.yt-dlp
-            pkgs.jetbrains.idea-ultimate
-            pkgs.jetbrains.pycharm-professional
+            pkgs.jetbrains.idea
+            pkgs.jetbrains.pycharm
             pkgs.sdl2-compat
             pkgs.podman
             pkgs.k9s
