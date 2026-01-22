@@ -68,6 +68,7 @@
             pkgs.sdl2-compat
             pkgs.podman
             pkgs.k9s
+            pkgs.talosctl
         ];
 
       homebrew = {
@@ -83,9 +84,10 @@
           "obsidian"
           "postman"
           "krita"
+          "unifi-identity-endpoint"
         ];
         masApps = {
-          "Magnet" = 441258766;
+          # "Magnet" = 441258766;
           "Bitwarden" = 1352778147;
           "Windows App" = 1295203466;
         };
@@ -190,12 +192,12 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#lt-rre-2022
-    darwinConfigurations."lt-rre-2022" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#lt-rre-2026
+    darwinConfigurations."lt-rre-2026" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."lt-rre-2022".pkgs;
+    darwinPackages = self.darwinConfigurations."lt-rre-2026".pkgs;
   };
 }
