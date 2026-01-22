@@ -35,10 +35,17 @@ scutil --get LocalHostName
 vi flake.nix
 ```
 
-then Install nix-darwin
+Backup original default `bashrc` and `zshrc` files (nix did it, but nix-darwin doesn't)
 
 ```sh
-sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ./flake.nix
+sudo mv /etc/bashrc /etc/bashrc.before-nix-darwin
+sudo mv /etc/zshrc /etc/zshrc.before-nix-darwin
+```
+
+then Install nix-darwin, for the first execution experimental features must be enabled
+
+```sh
+sudo nix run --extra-experimental-features "nix-command flakes" nix-darwin/master#darwin-rebuild -- switch --flake ./flake.nix
 ```
 
 ### Install dotfile
@@ -46,4 +53,13 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ./flake.nix
 ```sh
 cd dotfiles
 stow .
+```
+
+## Update / Add nix packages
+
+```sh
+cd ~/.config/nix
+nix flake update
+vim flake.nix
+mac-rebuild-nix
 ```
